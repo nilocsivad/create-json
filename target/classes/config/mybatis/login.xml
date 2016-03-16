@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- com.iam_vip.create_json.business.transfer.LoginModel -->
+<mapper namespace="com.iam_vip.create_json.database.access.layout.ILoginDAL">
+
+	<sql id="TABLE_NAME"> login </sql>
+
+	<parameterMap type="com.iam_vip.create_json.business.transfer.LoginModel" id="Login"></parameterMap>
+
+	<resultMap type="com.iam_vip.create_json.business.transfer.LoginModel" id="LoginMap" autoMapping="true"></resultMap>
+
+
+
+	<insert id="insert" parameterMap="Login">
+		INSERT INTO
+		<include refid="TABLE_NAME" />
+		(
+		uid,
+		lname,
+		lpwd,
+		status
+		)
+		VALUES(
+		#{uid},
+		#{lname},
+		#{lpwd},
+		#{status}
+		)
+	</insert>
+
+
+
+	<select id="countItem" parameterMap="Login" resultType="int">
+		SELECT COUNT(*) FROM
+		<include refid="TABLE_NAME" />
+
+		<trim prefix="WHERE" prefixOverrides="AND">
+			<if test="lname != null and lname != ''"> AND lname = #{lname} </if>
+			<if test="status != null and status != ''"> AND status = #{status} </if>
+		</trim>
+	</select>
+
+
+
+</mapper>

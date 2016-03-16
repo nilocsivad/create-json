@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- com.iam_vip.create_json.business.transfer.VipModel -->
+<mapper namespace="com.iam_vip.create_json.database.access.layout.IVipDAL">
+
+	<sql id="TABLE_NAME"> vip </sql>
+
+	<parameterMap type="com.iam_vip.create_json.business.transfer.VipModel" id="Vip"></parameterMap>
+
+	<resultMap type="com.iam_vip.create_json.business.transfer.VipModel" id="VipMap" autoMapping="true"></resultMap>
+
+
+
+	<insert id="insert" parameterMap="Vip">
+		INSERT INTO
+		<include refid="TABLE_NAME" />
+		(
+		uid,
+		todate,
+		count
+		)
+		VALUES(
+		#{uid},
+		#{todate},
+		#{count}
+		)
+	</insert>
+
+
+
+</mapper>

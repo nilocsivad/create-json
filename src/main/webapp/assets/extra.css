@@ -1,0 +1,22 @@
+.bef-txt {
+	text-indent: 2em;
+}
+
+.txt-20 {
+	font-size: 20px;
+}
+
+.h-10 {
+	line-height: 10px;
+	height: 10px;
+}
+
+.h-20 {
+	line-height: 20px;
+	height: 20px;
+}
+
+.h-30 {
+	line-height: 30px;
+	height: 30px;
+}

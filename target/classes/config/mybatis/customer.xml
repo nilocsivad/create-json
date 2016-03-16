@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- com.iam_vip.create_json.business.transfer.CustomerModel -->
+<mapper namespace="com.iam_vip.create_json.database.access.layout.ICustomerDAL">
+
+	<sql id="TABLE_NAME"> customer </sql>
+
+	<parameterMap type="com.iam_vip.create_json.business.transfer.CustomerModel" id="Customer"></parameterMap>
+
+	<resultMap type="com.iam_vip.create_json.business.transfer.CustomerModel" id="CustomerMap" autoMapping="true"></resultMap>
+
+
+
+	<insert id="insert" parameterMap="Customer" useGeneratedKeys="true" keyProperty="uid">
+		INSERT INTO
+		<include refid="TABLE_NAME" />
+		(
+		uname
+		)
+		VALUES(
+		#{uname}
+		)
+	</insert>
+
+
+
+</mapper>
