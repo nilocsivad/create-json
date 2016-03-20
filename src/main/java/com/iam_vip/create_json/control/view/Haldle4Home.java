@@ -3,6 +3,8 @@
  */
 package com.iam_vip.create_json.control.view;
 
+import java.io.IOException;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -27,12 +29,12 @@ public class Haldle4Home extends ActionRedirect {
 	public Haldle4Home() {}
 	
 	@RequestMapping( value = "to/index" )
-	public ModelAndView toHome( HttpServletRequest request, HttpSession session, HttpServletResponse response, ModelMap model ) {
+	public ModelAndView toHome( HttpServletRequest request, HttpSession session, HttpServletResponse response, ModelMap model ) throws IOException {
 		return new ModelAndView( VIEW + "home", model );
 	}
 	
 	@RequestMapping( value = "to/about" )
-	public ModelAndView toAbout( HttpServletRequest request, HttpSession session, HttpServletResponse response, ModelMap model ) {
+	public ModelAndView toAbout( HttpServletRequest request, HttpSession session, HttpServletResponse response, ModelMap model ) throws IOException {
 		return new ModelAndView( VIEW + "about", model );
 	}
 	

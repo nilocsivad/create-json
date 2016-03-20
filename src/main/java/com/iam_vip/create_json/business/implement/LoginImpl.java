@@ -41,4 +41,11 @@ public class LoginImpl implements ILogin {
 		return loginDAL.countItem( login );
 	}
 	
+	/* (non-Javadoc)
+	 * @see com.iam_vip.create_json.business.idefine.ILogin#queryOne(com.iam_vip.create_json.business.transfer.LoginModel)
+	 */
+	public LoginModel queryOne( LoginModel login ) {
+		return loginDAL.queryOne( login );
+	}
+	
 }

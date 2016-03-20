@@ -25,4 +25,21 @@
 
 
 
+	<select id="queryOne" parameterMap="Customer" resultMap="CustomerMap">
+		SELECT
+		<![CDATA[
+			uid,
+			uname
+		]]>
+		FROM
+		<include refid="TABLE_NAME" />
+
+		<trim prefix="WHERE" prefixOverrides="AND">
+			<if test="uid != null and uid != ''"> AND uid = #{uid} </if>
+			<if test="uname != null and uname != ''"> AND uname = #{uname} </if>
+		</trim>
+	</select>
+
+
+
 </mapper>

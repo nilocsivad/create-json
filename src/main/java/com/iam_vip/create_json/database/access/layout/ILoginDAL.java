@@ -13,8 +13,22 @@ import com.iam_vip.create_json.business.transfer.LoginModel;
 @Repository
 public interface ILoginDAL {
 	
+	/**
+	 * @param login
+	 * @return
+	 */
 	Integer insert( LoginModel login );
 	
+	/**
+	 * @param login
+	 * @return
+	 */
 	int countItem( LoginModel login );
+	
+	/**
+	 * @param login
+	 * @return
+	 */
+	LoginModel queryOne( LoginModel login );
 	
 }

@@ -5,7 +5,11 @@
 
 	<head>
 		<meta charset="utf-8" />
-		<title>关于我们</title>
+		<title>关于</title>
+		<script type="text/javascript">
+			var __title__ = "关于";
+			var __datat__ = "about";
+		</script>
 
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<meta name="Keywords" content="" />
@@ -30,21 +34,9 @@
 	<body>
 
 		<header id="header" class="header">
-			<div class="container clearfix">
-				<div class="logo pull-left">
-					<a href="${URL }"><img src="${URL }/assets/images/logo-w.png" alt="JSON"></a>
-				</div>
-				<ul class="menu pull-left">
-					<li><a href="${URL }/home/to/index">首页</a> </li>
-					<li><a href="${URL }/home/to/index#problem">常见问题</a> </li>
-					<li><a href="${URL }/home/to/index#action">最新动态</a> </li>
-					<li class="active"><a href="${URL }/home/to/about">关于我们</a> </li>
-				</ul>
-				<ul class="menu  pull-right" id="j-user">
-					<li class="login"><a href="${URL }/member/to/login"><i class="fa fa-sign-in"></i> 登录</a> </li>
-					<li class="register"><a href="${URL }/member/to/register"><i class="fa fa-plus-square"></i> 注册</a></li>
-				</ul>
-			</div>
+		
+			<%@ include file="header.jsp" %>
+			
 		</header>
 
 		<div class="support wrap">
@@ -82,28 +74,9 @@
 				</div>
 			</div>
 		</div>
-
-		<footer class="footer">
-			<div class="copyright clearfix">
-				<div class="container">
-					<p class="pull-left">Copyright &copy; 2010-2016 www.iam-vip.com 版权所有</p>
-					<p class="pull-right">
-						<a href="${URL }/home/to/about">关于我们</a> /
-						<a href="/contact">联系我们</a> /
-						<a href="/term">服务条款</a> /
-						<a href="/links">友情链接</a> /
-						<a href="/sitemap.xml" target="_blank">网站地图</a>
-					</p>
-				</div>
-			</div>
-		</footer>
-		<!-- /.footer -->
+		
+		<%@ include file="footer.jsp" %>
 
 	</body>
-
-	<script src="${URL }/assets/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
-	<script type="text/javascript">
-		// $(function() {});
-	</script>
 
 </html>

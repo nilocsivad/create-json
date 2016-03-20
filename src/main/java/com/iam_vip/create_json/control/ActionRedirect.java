@@ -20,14 +20,14 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class ActionRedirect extends ActionBase {
 	
-	protected static final String	VIEW				= "view/";
-														
-	protected static final String	REDIRECT			= "redirect:";
-														
-	private static final String		REDIRECT_FACADE		= "/home/to/index";
-	private static final String		REDIRECT_BACKEND	= "";
-														
-														
+	protected static final String	VIEW		= "view/";
+												
+	protected static final String	REDIRECT	= "redirect:";
+												
+	private static final String		REDIRECT_V	= "/home/to/index";
+	private static final String		REDIRECT_M	= "";
+												
+												
 	/**
 	 * 
 	 */
@@ -36,13 +36,13 @@ public class ActionRedirect extends ActionBase {
 	@RequestMapping( method = RequestMethod.GET, value = { "home" } )
 	public ModelAndView facade( HttpServletRequest request, HttpServletResponse response, ModelMap model ) throws IOException {
 		
-		return new ModelAndView( REDIRECT + REDIRECT_FACADE, model );
+		return new ModelAndView( REDIRECT + REDIRECT_V, model );
 	}
 	
 	@RequestMapping( method = RequestMethod.GET, value = { "backend", "back", "manage", "guanli" } )
 	public ModelAndView backend( HttpServletRequest request, HttpServletResponse response, ModelMap model ) throws IOException {
 		
-		return new ModelAndView( REDIRECT + REDIRECT_BACKEND, model );
+		return new ModelAndView( REDIRECT + REDIRECT_M, model );
 	}
 	
 }

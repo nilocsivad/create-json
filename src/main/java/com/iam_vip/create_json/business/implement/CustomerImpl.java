@@ -55,4 +55,11 @@ public class CustomerImpl implements ICustomer {
 		return customer;
 	}
 	
+	/* (non-Javadoc)
+	 * @see com.iam_vip.create_json.business.idefine.ICustomer#queryOne(com.iam_vip.create_json.business.transfer.CustomerModel)
+	 */
+	public CustomerModel queryOne( CustomerModel customer ) {
+		return customerDAL.queryOne( customer );
+	}
+	
 }

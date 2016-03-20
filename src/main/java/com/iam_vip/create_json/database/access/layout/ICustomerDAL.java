@@ -13,6 +13,16 @@ import com.iam_vip.create_json.business.transfer.CustomerModel;
 @Repository
 public interface ICustomerDAL {
 	
+	/**
+	 * @param customer
+	 * @return
+	 */
 	Integer insert( CustomerModel customer );
+	
+	/**
+	 * @param customer
+	 * @return
+	 */
+	CustomerModel queryOne( CustomerModel customer );
 	
 }

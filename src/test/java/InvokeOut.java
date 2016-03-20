@@ -7,7 +7,7 @@ import java.lang.reflect.Field;
 
 import org.junit.Test;
 
-import com.iam_vip.create_json.business.transfer.VipModel;
+import com.iam_vip.create_json.business.transfer.LoginModel;
 
 /**
  * @author Colin
@@ -23,7 +23,7 @@ public class InvokeOut {
 	@Test
 	public void uuid() {
 		
-		Object obj = new VipModel();
+		Object obj = new LoginModel();
 		Class< ? > cls = obj.getClass();
 		Field[] fields = cls.getDeclaredFields();
 		

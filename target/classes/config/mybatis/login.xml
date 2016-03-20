@@ -43,4 +43,23 @@
 
 
 
+	<select id="queryOne" parameterMap="Login" resultMap="LoginMap">
+		SELECT
+		uid,
+		lname,
+		lpwd,
+		status
+		FROM
+		<include refid="TABLE_NAME" />
+
+		<trim prefix="WHERE" prefixOverrides="AND">
+			<if test="uid != null and uid != ''"> AND uid = #{uid} </if>
+			<if test="lname != null and lname != ''"> AND lname = #{lname} </if>
+			<if test="lpwd != null and lpwd != ''"> AND lpwd = #{lpwd} </if>
+			<if test="status != null and status != ''"> AND status = #{status} </if>
+		</trim>
+	</select>
+
+
+
 </mapper>

@@ -11,6 +11,17 @@ import com.iam_vip.create_json.business.transfer.LoginModel;
  */
 public interface ICustomer {
 	
+	/**
+	 * @param customer
+	 * @param login
+	 * @return
+	 */
 	CustomerModel newCustomer( CustomerModel customer, LoginModel login );
+	
+	/**
+	 * @param customer
+	 * @return
+	 */
+	CustomerModel queryOne( CustomerModel customer );
 	
 }
