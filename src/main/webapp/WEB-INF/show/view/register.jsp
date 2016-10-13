@@ -5,7 +5,7 @@
 
 	<head>
 		<meta charset="utf-8" />
-		<title>注册用户</title>
+		<title>注册</title>
 		<script type="text/javascript">
 			var __title__ = "注册";
 		</script>

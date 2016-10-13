@@ -16,6 +16,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -111,12 +112,13 @@ public class Handle4Member extends ActionRedirect {
 		return super.facade( request, response, model );
 	}
 	
-	@RequestMapping( value = "to/my/thing" )
-	public ModelAndView toMyThing( HttpServletRequest request, HttpSession session, HttpServletResponse response, ModelMap model ) throws IOException {
+	@RequestMapping( value = "do/upload/templete/xml" )
+	public ModelAndView toMyThing( HttpServletRequest request, HttpSession session, HttpServletResponse response, ModelMap model, MultipartFile fxml, String url ) throws IOException {
 		
-		request.getSession().setAttribute( SESSION_V, null );
-		request.getSession().removeAttribute( SESSION_V );
-		request.getSession().invalidate();
+		if ( fxml != null && !fxml.isEmpty() ) {
+		
+		}
+		
 		return super.facade( request, response, model );
 	}
 	

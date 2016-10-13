@@ -33,7 +33,7 @@
 		<appender-ref ref="DailyLog4j" />
 	</logger>
 
-	<logger name="com.iam_vip.create-json.dal" additivity="false">
+	<logger name="com.iam_vip.create-json.database.access.layout" additivity="false">
 		<level value="debug" />
 		<appender-ref ref="Console" />
 	</logger>
